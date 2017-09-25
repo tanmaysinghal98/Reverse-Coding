@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Class::Instructions</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/button.css" %}" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Quicksand';
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+        #buttom1
+        {
+            background-color: rgb(0,188,212);
+        }
+        .terminal {
+            margin-top: 2%;
+            margin-left: 8%;
+            width: 80%;
+            height: 350px;
+            border-radius:3px;
+            box-shadow: 4px 4px 5px #888888;
+            font-family: "Quicksand",sans-serif;
+
+        }
+
+        .image {
+            position: relative;
+        }
+
+        #left_align {
+            left=0;
+            width=100%;
+        }
+
+        #div_main {
+            left=0;
+        }
+
+        .footer_row {
+            height: 35px;
+            padding-top: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        .btn-login {
+            color: #fff;
+            background-color: #00BFFF;
+            border-radius: 4px;
+            border: none;
+            margin-top=70%;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body background="{% static "back.png" %}" onload="sethid();textShow();visible1();noBack();" style="font-family:'Quicksand',sans-serif;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:black;">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="max-height:50px;">
+                
+
+                <ul class="nav navbar-nav" style="font-size:20px; font-family:'Quicksand',sans-serif;">
+                    
+                    <li>
+                        <a style="font-size:20px; font-family:'Quicksand',sans-serif;"><b>INSTRUCTIONS</b></a>
+                    </li>
+
+                </ul>
+                <img src="{% static "pisb.png" %}" height=54px align="right">
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+    </div>
+    </div>
+    </div>
+    <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <div class="col-md-5 sidenav" style="padding-top:5px;">
+                <div style="padding-left:13%">
+                    <img src="{% static "rc.png" %}" alt="" />
+                  </div>
+                    <h1 style="padding-left:0%;top: 200px;left: 0; color:#000000;font-family:courier; font-size:30px; " align=center> <b>while(!(succeed=try()));</b></h1>
+            </div>
+    <div class="col-md-7">
+        <h1 style="color:#000000; font-family:'Quicksand',sans-serif;"><center><b>INSTRUCTIONS</b></center></h1>
+        <div class="terminal" style="background-color:#00bcd4">
+            <div>
+                <p id="text" style="font-family:'Quicksand',sans-serif; font-size:17px; position:absolute; padding-top:1%; padding-left:2%; padding-right:16%"><b>1)   Direct Answers (NO MCQS)<br>
+2)  2 turns will be given to participant to attempt the question.<br>
+3)  No skips<br>
+4)  Time Limit: 25 minutes<br>
+5)  A count will be there for both questions and score. If any participant doesn’t attempt any question (that is if question count is 0) then he/she will be disqualified. This will be included in the instructions.<br>
+6)  Score format:<br>
+1st attempt: correct (+4)<br>
+2nd attempt: correct (+2)<br>
+both attempts wrong: -2<br>
+7)  Number of Questions: unlimited<br></b>
+                </p>
+            </div>
+            <div style="padding-top:55%; margin-left:2%; margin-bottom:3%">
+                <div id="button1" class="button" onclick="location.href='start';" style="background-color:rgb(0,188,212);">LETS GO!!</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 footer_row" style="position:fixed; bottom:0; text-align:center;font-family: 'Quicksand', sans-serif;">
+        <p> Copyright© CREDENZ'16, PICT IEEE Student Branch, 2016</p>
+    </div>
+
+    <script>
+window.history.forward();
+function noBack() 
+  { window.history.forward(); }
+    
+        function sethid() {
+            var a = document.getElementById("button1");
+            a.style.visibility = 'hidden';
+
+        }
+
+        function textShow() {
+
+            var p = document.getElementById('text');
+            var n = 0;
+            var str = p.innerHTML;
+            p.innerHTML = '';
+            setInterval(function() {
+                n = n + 1;
+                p.innerHTML = str.slice(0, n)
+            }, 20);
+
+        }
+
+        function visible1() {
+            var a = document.getElementById("button1");
+            a.style.visibility = 'visible';
+
+        }
+    </script>
+    <style>
+        #text {
+            font-style: courier;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+        }
+
+        </body></html>

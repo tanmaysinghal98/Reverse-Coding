@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+<link id="link1" rel="stylesheet" type="text/css" href="http //:wwww.credenz.info">
+  <title>Legacy 3: RC'16</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/questionsPageTemp2.css" %}" rel="stylesheet">
+  <script src="{% static "js/jquery.js" %}"></script>
+  <script src="{% static "js/questionsPageTemp.js" %}"></script>
+  <script src="{% static "js/timerscript.js" %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+   <script src="{% static "js/bootstrap.min.js" %}"></script>
+   <script>
+
+window.setTimeout("refresh()",1000);     //refresh() function will be called after 0.5 seconds   generally skip the word windows
+function refresh()
+
+{
+    // The XMLHttpRequest object is used to exchange data with a server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.  
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    }
+  else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  xmlhttp.onreadystatechange=function()     //Stores a function (or the name of a function) to be called automatically each time the readyState property changes
+    {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)   // '4' means request finished and response is ready
+                                                        //  '200' ststus is OK
+                                                        // '404'    page not found
+      {
+        CreateTimer("timer",parseInt(xmlhttp.responseText));    //Calling the function CreateTimer and passing parameters
+      }
+    }
+  xmlhttp.open("GET","/time",true);         // open(method,url, async)  specifies the type of request
+  xmlhttp.send();       //sends the request to the server
+  return
+}
+</script>
+<style type="text/css">
+body{
+	background:url("{% static "maths doodle.png" %}");
+}
+.bigboxbottom h2{
+	font-style: bold;
+	color:  black;
+}
+.bigboxbottom{
+	font-size: 17px;
+	padding-top: 10%;
+}
+#submit1
+{
+  background-color: rgb(0,188,212);
+}
+  #helper_1{
+    width: 100%;
+    height: 25%;
+  }
+  #box1{float:right; background: rgba(0,188,212,0.4);
+    width: 75%; height: 75%;
+    border:4px solid  #00bcd4;
+    border-radius: :4px;
+}
+  #helper_2{
+    width: 100%;
+    height: 25%;
+  }
+  #box2{ 
+ 
+  float: left;
+  width: 75%;
+  height: 75%;
+  background: rgba(0,188,212,0.4);
+  color: black;
+  border:4px solid  #00bcd4;
+  border-radius: 4px;
+  color: black;
+  }
+  #box3{
+    float:right;
+    width: 75%;
+    height: 75%;
+    background: rgba(0,188,212,0.4);
+    border:4px solid #00bcd4;
+    border-radius: 4px;
+    color: black;
+  }
+  #box4{
+  	
+    float: left;
+    width: 75%;
+    height: 75%;
+    background: rgba(0,188,212,0.4);
+    border:4px solid #00bcd4;
+    border-radius: 4px;
+    color: black;
+  }
+  #boxScore
+  {
+    color: black;
+    font-size: 20px;
+  }
+  #text-rc
+  {
+    background: rgba(255,255,255,0.4);
+    color: black;
+    border: 1px solid black;
+  }
+  .float{
+    width: 50%;
+    height: 50%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    color: orange;
+    font-weight: bold;
+  }
+         #submit1
+      {
+
+        height:60px;
+        width: 100%;
+        margin-top: 10px;
+
+
+      }
+      #submit1:hover
+      {
+        
+      }
+       #tex1
+      {
+
+        height:60px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        padding: 10px;
+        background: rgba(255,255,255,0.4);
+
+      }
+      #tex1:hover
+      {
+                background-color: rgb(240,250,240);
+                color: black;
+                transition-duration: 1s;
+      }
+      #tex2
+      {
+      	padding: 10px;
+      	margin-top: 15px;
+      	margin-bottom: 10px;
+        height:60px;
+        width: 100%;
+        background: rgba(255,255,255,0.4);
+        color: black;
+      }
+      #tex2:hover{% load staticfiles %}
+      {
+                background-color: rgb(240,250,240);
+             
+                transition-duration: 1s;
+      }
+      #boxhouse{
+        height: 89%;
+
+      }
+      #left-bar{
+        background-color: transparent;      }
+      #left-bar-things{
+        list-style: none;
+        margin-top: 5px;
+        width: 100%;
+        background-color: #00bcd4;
+        font-size: 20px;
+      }
+      .left-things{
+        width: 100%;
+        background-color: transparent;
+        color: #00bcd4;
+        margin-bottom: 5px;
+        border: solid #00bcd4;
+        padding: 16px;
+      }
+      #time{
+        width: 100%;
+        background-color: white;
+        color: black;
+        padding: 16px;
+        margin-bottom: 5px;
+      }
+      #logo-side{
+        height: 200px;
+        width: 250px;
+        color: black;
+        padding-right: 20px;
+      }
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  background-color: #00bcd4;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+      #box-container{
+        width: 90%;
+        height: 90%;
+        float: right;
+      }
+      .bigboxbottom:hover{
+        transform: scale(1.5,1.5);
+        transition-duration: 0.5s;
+      }{% load staticfiles %}
+      #previousAnswer{
+      	margin-top: 10px;
+      	border: 7px solid #00bcd4;
+      	height: 200px;
+      	font-size: 16px;
+      	color: black;
+        background: rgba(0,188,212,0.4);
+      }
+      #previousAnswer h1{
+      	color: black;
+      	font-weight: bold;
+      }
+
+      #prevAnswerVal
+      {
+        color: black;
+      }
+
+      #active1
+      {
+        background-color: transparent;
+        color: rgb(255,82,82);
+        border: 1px solid #888;
+
+      }
+
+.container-fluid
+{
+  background: rgba(255,255,255,0.4);
+}
+#myBtn
+{
+  background-color: rgba(0,188,212,0.4);
+  color: black;
+  box-shadow: 3px 3px 3px 3px;
+  font-size: 20px;
+}
+#myBtn:hover
+{
+  background-color: rgb(0,188,212);
+
+}
+#myBtn1
+{
+
+  background-color: rgba(0,188,212,0.4);
+  color: black;
+  box-shadow: 3px 3px 3px 3px;
+  font-size: 20px;
+}
+#myBtn1:hover
+{
+  background-color: rgb(0,188,212);
+
+}
+.time1
+{
+  background-color: rgb(0,188,212);
+}
+#myNav1{
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif;
+
+	
+}
+ #footer{
+            background-color: black;
+            color: white;
+            padding: 6px;
+            height: 35px;
+        }
+        .row{
+        	margin-top: 20px;
+        }
+</style>
+
+
+</head>
+<body onload="noBack();disableBtn();previous();my_onkeydown_handler();checkKeycode(e)" onkeydown="return showKeyCode(event)" onpageshow="if (event.persisted) noBack();" onunload="" style="font-family:'Quicksand',sans-serif;">
+
+
+<script type="text/javascript">
+function showKeyCode(e) {
+   // debugger;
+    var keycode;
+    if (window.event)
+        keycode = window.event.keyCode;
+    else if (e)
+        keycode = e.which;
+
+    // Mozilla firefox
+    if ($.browser.mozilla) {
+        if (keycode == 116 || (e.ctrlKey && keycode == 82)) {
+            if (e.preventDefault) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }
+    }
+    // IE
+    else if ($.browser.msie) {
+        if (keycode == 116 || (window.event.ctrlKey && keycode == 82)) {
+            window.event.returnValue = false;
+            window.event.keyCode = 0;
+            window.status = "Refresh is disabled";
+        }
+    }
+    else {
+        switch (e.keyCode) {
+
+            case 116: // 'F5'
+                event.returnValue = false;
+                event.keyCode = 0;
+                window.status = "Refresh is disabled";
+                break;
+
+        }
+    }
+} 
+</script>
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid" style="background: rgb(0,0,0)" id="myNav1">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="max-height:50px;">
+      <ul class="nav navbar-nav" id="navbar1">
+       <li class="active"><a href="#" id="active1"><b>Reverse Coding: Round 1</b></a></li>
+       <li class="active" style="margin-left:10px;"><a href="#" id="active1"><b>Questions Page</b></a></li>
+      </ul> 
+      <ul class="nav navbar-nav navbar-right">
+        <li><button class="button" onclick="dispmodal()" id="quitbutton"><b>LogOut</b> <span class="glyphicon glyphicon-log-out span"></span></button></li>
+        <li><img src="pisb.png" style="height:50px; width:100px; "></li>
+      </ul>
+      </
+    </div>
+  </div>
+</nav>-->
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:black;">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="max-height:50px;">
+                
+
+                <ul class="nav navbar-nav" style="font-size:20px; font-family:'Quicksand',sans-serif;">
+                    <li>
+                        <a style="font-size:20px; font-family:'Quicksand',sans-serif;"><b>QUESTIONS</b></a>
+                    </li>
+
+                </ul>
+                 <ul class="nav navbar-nav navbar-right">
+        <li><button class="button" onclick="dispmodal()" id="quitbutton"><b>Quit</b> <span class="glyphicon glyphicon-log-out span"></span></button></li>
+      
+              <li>  <img src="{% static "pisb.png" %}" height=54px align="right"></li></ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+  
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-lg-2 sidenav" id="left-bar" style="margin-left:30px;">
+      <img src="{% static "rc.png" %}" id="logo-side">
+      
+<button class="left-things" id="myBtn"><b>Instruction</b></button><br><br>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>
+    <b>Credenz:</b>
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+    </p>
+  </div>
+
+
+</div>
+  <button class="left-things" data-target="myModal" data-toggle="myModal" id="myBtn1"><b>Common Hint</b></button><br><br>
+  <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>
+    <b>Credenz:</b>
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+
+
+PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance 
+
+From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies are focal points of the event
+    </p>
+  </div>
+  
+</div>
+
+	<div id="previousAnswer" align="center">
+		<h1>Previous Answer:</h1>
+		<label id="prevAnswerVal"></label>
+	</div>
+    </div>
+
+    <div class="col-lg-5 text-left " style="margin-left:22%; position:fixed;">
+    <br>
+    <br>
+          <textarea rows="13" cols="60" placeholder="Question will come here" id="text-rc" disabled>{{ q1.question }}</textarea><br><br>
+<form action="check" method="post">{% csrf_token %}
+<input type="text" id="tex1" name="correct" placeholder="Attempt 1" required><br>
+<input type="text" id="tex2" name="correct" placeholder="Attempt 2" required><br><br>
+<input type="hidden" name="id" value="{{q1.id}}">
+<input type="submit" value="Submit" id="submit1" name="submit" onclick="fun1();">
+</form>
+    </div>
+    <div class="col-lg-5 sidenav" id="boxhouse" style="position:fixed; right:0;">
+    <div id="box-container">
+    <div class="float" id="top_left">
+    <div id="helper_1"></div>
+    <div id="box1" class="bigboxbottom">
+    <h2>SCORE</h2>
+     <label id="boxScore"><b>{{request.user.players.total_score}}</b></label>
+    
+    </div>
+  </div>
+  <div class="float" id="top_right">
+    <div id="helper_2"></div>
+    <div id="box2" class="bigboxbottom" >
+    <h2>Attempt Remaining</h2>
+    <label id="boxAttempt"><b>{{request.user.players.count}}</b></label>
+    
+    </div>
+  	</div>
+  	<div class="float" id="bottom_left">
+    <div id="box3" class="bigboxbottom">
+    
+    <h2>TIME LEFT:</h2>
+    <label id="timer"></label>
+    </div>
+  	</div>
+  	<div class="float">
+    <div id="box4" class="bigboxbottom">
+    <h2>Questions Attempted</h2>
+    <label id="boxQuestions"><b>{{request.user.players.questions_attempted}}</b></label>
+</div>
+  </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="quit-modal" id="quitmodal">
+
+<div align="center" class="quit-modal-content fadeInRight">
+<header class="container" id="modal-head"><h2>Are You Sure?</h2></header>
+<form action="logout" method="post">{% csrf_token %}
+  <button type="submit" id="redirect-to-results" >Proceed To Results</button>
+</form>
+  <button id="hide-modal" onclick="hidemodal()">Go Back To Questions</button>
+</div>
+</div>
+
+ <div class="col-md-12 footer_row" id="footer" style="position:fixed; bottom:0; text-align:center;font-family: 'Quicksand', sans-serif;">
+                <p> Copyright© CREDENZ'16, PICT IEEE Student Branch, 2016</p>
+            </div>
+
+</body>
+<script type="text/javascript">
+window.history.forward();
+
+  /*var but= document.getElementById("button");
+  function texttime(){
+    var min= 30;
+    var tim= setInterval(timeup, 150);
+    var lab= document.getElementById("box4-label");
+    function timeup()
+    {
+      if(min<=1)
+        {clearInterval(tim);}
+      else
+      {
+        min= min-1;
+        $("#box4-label").text(min + 'mins');
+      }
+    }
+  }*/
+ function disableBtn() 
+{   var x= "{{request.user.players.count}}"
+    fun1();
+    //document.getElementById("tex2").disabled = true;
+    //document.getElementById("tex1").disabled = false;
+}
+
+
+  function noBack() 
+  { window.history.forward(); }
+
+
+
+
+function back()
+{
+  document.getElementById("hide-modal").disabled=true;
+}
+/*
+function undisableBtn() 
+{
+    document.getElementById("tex2").disabled = false;
+    document.getElementById("tex1").disabled = true;
+}*/
+  
+  function fun1()
+  {
+  var counter="{{request.user.players.count}}";
+  
+  if (counter=='2')
+    {
+    document.getElementById("tex1").disabled = false;
+    document.getElementById("tex2").disabled = true;
+    document.getElementById("tex2").style.backgroundColor="grey";
+    }
+    else if (counter=='1')
+    {
+      document.getElementById("tex1").disabled = true;
+      document.getElementById("tex2").disabled = false;
+       document.getElementById("tex1").style.backgroundColor="grey"; 
+    }
+    /*var flag=0;
+    if (flag=='1')
+     {
+      counter=2;
+     }
+     else if (flag=='0')
+      {
+        counter=1;
+        
+      }*/
+  }
+  function previous()
+  {
+    var c="{{request.user.players.count}}";
+    if(c=='2')
+    {
+      document.getElementById("prevAnswerVal").innerHTML="NULL";
+    }
+    else if(c=='1')
+    {
+      document.getElementById("prevAnswerVal").innerHTML="{{request.user.players.previous_answer}}";
+    }
+  }
+   
+
+  
+
+
+
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0]; 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+   
+   var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn1");
+var span = document.getElementsByClassName("close")[0]; 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+
+
+
+</html>
+

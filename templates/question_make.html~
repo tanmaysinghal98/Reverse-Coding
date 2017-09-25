@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="ques" method="post">{% csrf_token %}
+Question text:<input type="text" name="question_text"><br>
+Answer:<input type="text" name="correct"><br>
+level:<input type="text" name="level"><br>
+<input type="submit" name="qs" value="submit"><br>
+</form>
+</body>
+</html>

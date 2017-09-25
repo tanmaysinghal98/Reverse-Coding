@@ -1,0 +1,333 @@
+        #radio-label
+      {
+        height:50px;
+        width: 150px;
+        margin: 0;
+        color: white;
+        border-radius: 3px;
+        padding-top: 10px;
+        display: inline-block;
+        border: 1px solid white;
+        background-color: rgba(0,0,0,0.7);
+
+      }
+      #radio1
+      {
+        visibility: hidden;
+      }
+      #radio2
+      {
+        visibility: hidden;
+      }
+      #radio3
+      {
+        visibility: hidden;
+      }
+      #radio4
+      {
+        visibility: hidden;
+      }
+      .radio-holder
+      {
+        padding-top: 0px;
+        border:5px;
+        box-shadow: 10px
+        background-color: red;
+      }
+      #radio1:checked+label
+      {
+        background-color: grey;
+        transition-duration: 0.5s;
+        border: 1px solid DarkSlateGray;
+        color: DarkSlateGray;
+
+      }
+      #radio2:checked+label
+      {
+        background-color: grey;
+        transition-duration: 0.5s;
+        color: DarkSlateGray;
+        border: 1px solid DarkSlateGray;
+      }
+       #radio3:checked+label
+      {
+        background-color: grey;
+        transition-duration: 0.5s;
+        color: DarkSlateGray;
+        border: 1px solid DarkSlateGray;
+      }
+      #radio4:checked+label
+      {
+        background-color: ivory;
+        transition-duration: 0.5s;
+        color: DarkSlateGray;
+        border: 1px solid DarkSlateGray;
+      }
+      #submit1
+      {
+        background-color: rgb(11,78,187);
+        color: white;
+        height:60px;
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 19px;
+        font-weight: bold;
+        border-radius: 3px;
+        border:none;
+        transition: 0.3s linear;
+
+      }
+      #submit1:hover
+      {
+                background-color: rgb(7,54,131);      
+      }
+      #submit:active
+      {
+        background-color: #1E88E5;
+        box-shadow: 0 1px 4px #757575;
+      }
+     #hover:hover{
+        color: ivory;
+        transition-duration: 1s;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      color: black;
+      background: rgba(255,255,255,0.4);
+    
+    
+      
+    }
+    .side-nav-btn{
+      display: inline-block;
+      background-color: black;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: rgb(255,82,82);
+      font-family: "Lora", sans-serif;
+    }
+     #redirect-to-results{
+         display: inline-block;
+          background-color: black;
+            border: none;
+            width: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: ghostwhite;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-radius: 3px;
+          }
+    #hide-modal{
+           display: inline-block;
+            background-color: black;
+            border: none;
+            width: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: ghostwhite;
+            border-radius: 3px;
+    }
+        #quitbutton {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      color: gray;
+      text-align: center;
+      font-size: 17px;
+      padding: 10px;
+      width: 120px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 3px;
+    }
+    #quitbutton .span {
+       cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    #quitbutton .span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    #quitbutton:hover{color: white;}
+    #quitbutton:hover .span {
+      padding-right: 25px;
+      color: white;
+    }
+    #quitbutton:hover .span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .row.content {
+      height: 600px;
+      }
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      height: 100%;
+      font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    }
+    .STLabel{
+      background-color: black;
+      text-align: center;
+      font-size: 17px;
+      padding: 10px;
+      width: 100px;
+      cursor: pointer;
+      margin: 3px;
+      display: inline-block;
+
+    }
+
+    .score-time{
+      width: 30%;
+      text-align: center;
+      border: none;
+      display: block;
+      color: white;
+    }
+    .quit-modal{
+      display: none;
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255,255,255,0.4);
+      transition: 0.6s linear;
+    }
+    .quit-modal-content{
+        margin: 10% auto;
+        width: 50%;
+        height: 40%;
+        background: rgba(0,0,0,0.8);
+        border-radius: 4px;
+    }
+    #modal-head{
+      background-color: black;
+      height: 70px;
+      text-align: center;
+      width: 100%;
+      color: ghostwhite;
+      border: 1px solid white;
+      border-radius: 3px;
+    }
+
+    .log1
+    {
+      background:url("clash.png");
+    }
+    #log2
+    {
+      padding-top: 0;
+      height: 40px;
+      width: 40px;
+    }
+    .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.wp-content
+{
+  width: 500px;
+  height: 300px;
+  background:white;
+  border-radius: 3px;
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
+.wp-content a
+{
+  padding: 10px;
+  background:#3498db;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 5px;
+}
+    #myNavbar
+    {
+      box-shadow: 10px 10px 10px grey;
+    }
+
+    #myBtn
+    {
+      background-color: 
+    }

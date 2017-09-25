@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body{
+        background-image: url("math3.jpg");
+    }
+    #totalscore{  
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px powderblue;
+      height: 100px;
+      font-weight: bolder;
+      float: left;
+      font-size: 70px ;   
+    }
+    .logopisb{
+        float: left;
+        max-width: 150px;
+        max-height: 70px;
+         -moz-animation-name: logocreani;
+             -moz-animation-duration: 4s;
+               -moz-animation-delay: 1s;
+          -webkit-animation-name: logocreani;
+             -webkit-animation-duration: 4s;
+               -webkit-animation-delay: 1s;
+
+
+    }
+    .logocre{
+        margin-top: 10px;
+        float: right;
+        max-width: 190px;
+        max-height: 120px;
+         -moz-animation-name: logocreani;
+             -moz-animation-duration: 4s;
+               -moz-animation-delay: 1s;
+          -webkit-animation-name: logocreani;
+             -webkit-animation-duration: 4s;
+               -webkit-animation-delay: 1s;
+    }
+         @-moz-keyframes logocreani {
+            0% {
+               opacity: 0;
+               -moz-transform: rotateY(0deg);
+            }
+            100%{
+                opacity: 1;
+               -moz-transform: rotateY(360deg);
+            }
+         }
+          .clash{
+        margin-left: 280px;
+        height:80px;
+        width: 160px;
+        -moz-animation-name: clashani;
+             -moz-animation-duration: 4s;
+         -webkit-animation-name: clashani;
+             -webkit-animation-duration: 4s;
+      }
+      @-moz-keyframes clashani {
+            0% {
+               opacity: 0;
+               -moz-transform: scale3d(.1,.1,.1) translate3d(0,1000px,0);
+                -moz-animation-timing-function:cubic-bezier(0.550,0.055,0.675,0.190);
+            }
+            60%{
+                opacity: 1;
+-moz-transform: scale3d(.475,.475,.475) translate3d(0,-60px,0);
+                -moz-animation-timing-function:cubic-bezier(0.175,0.855,0.320,1);            }
+         }
+        
+    .score  { text-align: center;
+       
+        margin-top: 190px;
+        margin-bottom: 120px;
+        -moz-animation-name: scoreani;
+        -moz-animation-timing-function: ease-out;
+             -moz-animation-duration: 2s;
+        -webkit-animation-name: scoreani;
+        -webkit-animation-timing-function: ease-out;
+             -webkit-animation-duration: 2s;
+
+       }
+       @-moz-keyframes scoreani {
+            from {
+               opacity: 0;
+               -moz-transform: translate3d(100%,0,0) skewX(-30deg);
+            }
+             60% {
+               opacity: 1;
+               -moz-transform: skewX(20deg);
+            }
+            80%{
+                opacity: 1;
+               -moz-transform: skewX(-5deg);
+            }
+            to{
+                opacity: 1;
+               -moz-transform: none;
+            }
+        }
+       .foot{
+            vertical-align:text-bottom; 
+       }
+       .adv{  border-radius: 100%;
+                margin-bottom: 5px;
+            
+       }
+       .adv:hover{
+        transition: all 0.8s ease;
+        border-radius: 100%;
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.4), 0 10px 30px 0 rgba(255, 255, 255, 0.5);
+        background: -moz-radial-gradient(rgb(9,166,122) ,black);
+       }
+       .start_img1 {
+   
+                  -moz-animation-name: adv1;
+             -moz-animation-duration: 1s;
+                  -webkit-animation-name: adv1;
+             -webkit-animation-duration: 1s;
+     
+}
+
+
+    
+     .start_img2 {
+    
+                  -moz-animation-name: adv1;
+             -moz-animation-duration: 2s;
+                  -webkit-animation-name: adv1;
+             -webkit-animation-duration: 1s;
+     
+}
+
+      
+     .start_img3 {
+   
+                  -moz-animation-name: adv1;
+             -moz-animation-duration: 3s;
+                  -webkit-animation-name: adv1;
+             -webkit-animation-duration: 1s;
+}
+ @-moz-keyframes adv1 {
+            0% {
+               opacity: 1;
+               -moz-transform: translateY(500px);
+               -webkit-transform: translateY(500px);
+            }
+            100%{
+                opacity: 1;
+               -moz-transform: translateY(0px);
+               -webkit-transform: translateY(0px);
+            }
+         }
+       .visit{
+        margin-left: 100px;
+        color: #FFFFFF;
+       }
+       .row{
+        margin-left: 20px;
+        margin-right: 20px;
+       }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body background="Images/math3blur.jpg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <img class="logopisb"src="logopisb.png" alt="img" align="left"></img>
+               <img src="clashname.png" class="clash"  >
+               <img class="logocre"src="credenzLogo.png" alt="img"align="right"></img>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row score ">
+           
+            
+                <br><br><br>
+               <h3 id="totalscore">YOUR SCORE :  15 </h3>
+            
+        </div>
+        <!-- /.row -->
+
+    </div>
+     <div class="row body">
+           <h3 class="visit">Do Visit Other Events....</h3>
+             <div class="col-lg-2 text-center adv start_img1" >
+                <img src="quiz.png" alt="IMG" style="height: 120px;"></img>
+            </div>
+            <div class="col-lg-2 text-center adv start_img2" >
+                <img src="xodia.png" alt="IMG" style="width:120px;height:120px;"></img>
+            </div>
+            <div class="col-lg-2 text-center adv start_img3" >
+               <img src="pix.png" alt="IMG" style="width:120px;height:120px;"></img>
+            </div>
+             <div class="col-lg-2 text-center adv start_img3" >
+                <img src="softdev.png"   alt="IMG" style="width:120px;height:120px;"></img>
+            </div>
+             <div class="col-lg-2 text-center adv start_img2" >
+                <img src="webweaver.png"    alt="IMG" style="width:120px;height:120px;"></img>
+            </div>
+             <div class="col-lg-2 text-center adv start_img1 " >
+                <img src="clash.png"   alt="IMG" style="width:120px;height:120px;"></img>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+   <div> <footer class="container-rigid text-center  foot">
+  <p><center>Copyright @ Credenz'16 Clash , PICT IEEE Student Branch</center> </p>
+</footer>
+</div>
+</body>
+
+</html>
